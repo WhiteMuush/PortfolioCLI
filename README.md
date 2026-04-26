@@ -2,6 +2,8 @@
 
 Portfolio interactif entièrement dans le terminal navigue entre mes projets DevSecOps, clone et lance-les directement depuis l'interface.
 
+<img width="1907" height="1073" alt="image" src="https://github.com/user-attachments/assets/bce0003f-79f9-4f55-80dd-785fcb7de258" />
+
 ## Aperçu
 
 - Écran d'accueil animé au démarrage
