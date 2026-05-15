@@ -20,7 +20,7 @@
 
 ---
 
-<img width="1907" height="1073" alt="aperçu portfolio CLI" src="https://github.com/user-attachments/assets/bce0003f-79f9-4f55-80dd-785fcb7de258" />
+<img width="1916" height="1074" alt="image" src="https://github.com/user-attachments/assets/bc2765ba-919f-416b-a237-a9db0d3bdd44" />
 
 ---
 
