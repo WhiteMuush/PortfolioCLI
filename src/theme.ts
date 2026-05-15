@@ -16,7 +16,7 @@ const light = {
 }
 
 const dark = {
-  background:        RGBA.fromInts(24,  20,  22),
+  background:        RGBA.fromInts(38,  32,  35),
   backgroundPanel:   RGBA.fromInts(34,  28,  31),
   backgroundElement: RGBA.fromInts(46,  38,  42),
   border:            RGBA.fromInts(92,  76,  84),

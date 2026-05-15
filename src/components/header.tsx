@@ -68,13 +68,13 @@ export function Header() {
       paddingLeft={3}
       paddingRight={3}
       paddingTop={1}
-      paddingBottom={1}
+      paddingBottom={0.5}
     >
       <text fg={theme.primary}>
-        <b>◈ Melvin Petit</b>
+        <b></b>
       </text>
       <AnimatedTitle />
-      <text fg={theme.textMuted}>melvin.petit31@gmail.com</text>
+      <text fg={theme.textMuted}></text>
     </box>
   )
 }

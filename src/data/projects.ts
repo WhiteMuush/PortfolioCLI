@@ -3,17 +3,43 @@ import { ascii } from "./ascii"
 export type Project = {
   id: string
   name: string
-  tagline: string
-  description: string
-  features: string[]
-  tech: string[]
-  snippet: string[]
+  tagline?: string
+  description?: string
+  features?: string[]
+  tech?: string[]
+  snippet?: string[]
   ascii?: string
+  headerAscii?: string
+  contact?: { label: string; value: string; action?: "url" | "copy" }[]
   repo?: string
   run?: string[]
 }
 
 export const projects: Project[] = [
+  {
+    id : "whoami",
+    name: "À propos",
+    tagline: "WhiteMuush · Étudiant Admin Sys et DevOps",
+    headerAscii: `        ███╗   ███╗███████╗██╗    ██╗   ██╗██╗███╗   ██╗    ██████╗ ███████╗████████╗██╗████████╗
+        ████╗ ████║██╔════╝██║    ██║   ██║██║████╗  ██║    ██╔══██╗██╔════╝╚══██╔══╝██║╚══██╔══╝
+        ██╔████╔██║█████╗  ██║    ██║   ██║██║██╔██╗ ██║    ██████╔╝█████╗     ██║   ██║   ██║   
+        ██║╚██╔╝██║██╔══╝  ██║    ╚██╗ ██╔╝██║██║╚██╗██║    ██╔═══╝ ██╔══╝     ██║   ██║   ██║   
+        ██║ ╚═╝ ██║███████╗███████╗╚████╔╝ ██║██║ ╚████║    ██║     ███████╗   ██║   ██║   ██║   
+        ╚═╝     ╚═╝╚══════╝╚══════╝ ╚═══╝  ╚═╝╚═╝  ╚═══╝    ╚═╝     ╚══════╝   ╚═╝   ╚═╝   ╚═╝   
+                                                                                Portfolio 2026
+        `,
+    description:
+      "Enchanté ! Je m'appelle Melvin et je suis étudiant Admin Cloud spécialisé en Azure " +
+      "avec une appétence pour le DevOps et la sécurité informatique. Je conçois des toolkits " +
+      "sur mesure, en mettant l'accent sur l'automatisation et la simplicité d'utilisation.",
+      
+    contact: [
+      { label: "GitHub",   value: "github.com/WhiteMuush",       action: "url" },
+      { label: "Email",    value: "melvin.petit31@gmail.com",     action: "copy" },
+      { label: "LinkedIn", value: "linkedin.com/in/melvin-petit", action: "url" },
+    ],
+    ascii: ascii.whoami,
+  },
   {
     id: "sandevistan",
     name: "sandevistan",

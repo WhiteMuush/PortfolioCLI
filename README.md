@@ -42,14 +42,23 @@
 
 ## Démarrage rapide
 
-> **Prérequis :** [Bun](https://bun.sh) ≥ 1.3
-
 ```bash
 git clone https://github.com/WhiteMuush/portfolio.git
 cd portfolio
+bash portfolio.sh
+```
+
+Le script vérifie automatiquement les dépendances ([Bun](https://bun.sh) ≥ 1.3, packages npm) et propose de les installer si nécessaire, puis lance le portfolio.
+
+<details>
+<summary>Lancement manuel</summary>
+
+```bash
 bun install
 bun dev
 ```
+
+</details>
 
 ---
 
