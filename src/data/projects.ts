@@ -2,6 +2,7 @@ import { ascii } from "./ascii"
 
 export type Project = {
   id: string
+  kind?: "about"
   name: string
   tagline?: string
   description?: string
@@ -18,6 +19,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     id : "whoami",
+    kind: "about",
     name: "À propos",
     tagline: "WhiteMuush · Étudiant Admin Sys et DevOps",
     headerAscii: `        ███╗   ███╗███████╗██╗    ██╗   ██╗██╗███╗   ██╗    ██████╗ ███████╗████████╗██╗████████╗
@@ -166,8 +168,6 @@ export const projects: Project[] = [
       "Répertoires de sortie horodatés avec export JSON et XML",
     ],
     tech: ["Bash", "BloodHound", "Impacket", "CrackMapExec", "Nmap"],
-    snippet: [
-    ],
     ascii: ascii.Ghostline,
     repo: "https://github.com/WhiteMuush/Ghostline.git",
     run: ["bash", "ghostline.sh"],
