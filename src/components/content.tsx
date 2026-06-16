@@ -37,7 +37,7 @@ export function Content(props: { project: Project }) {
           paddingTop={2}
           paddingBottom={2}
         >
-          <Show when={p().id === "whoami"} fallback={
+          <Show when={p().kind === "about"} fallback={
             <box flexDirection="column">
               <text fg={theme.primary}><b>◈ {p().name}</b></text>
               <text fg={theme.border}>{"─".repeat(42)}</text>
