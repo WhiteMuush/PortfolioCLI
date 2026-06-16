@@ -28,7 +28,7 @@ async function main() {
     process.removeListener("exit", onExit)
 
     if (!pendingLaunch) {
-      // L'utilisateur a pressé q → process.exit() a déjà été appelé
+      // User pressed q, process.exit() was already called
       process.exit(0)
     }
 
@@ -36,23 +36,23 @@ async function main() {
     const dir = join(process.env.HOME!, ".portfolio-cli", project.id)
 
     if (!Bun.which("git")) {
-      process.stderr.write("git introuvable. Installez git puis réessayez.\n")
+      process.stderr.write("git not found. Install git then try again.\n")
       continue
     }
 
     if (!existsSync(dir)) {
-      process.stdout.write(`\nClonage de ${project.name}...\n`)
+      process.stdout.write(`\nCloning ${project.name}...\n`)
       const clone = Bun.spawn(["git", "clone", project.repo!, dir], {
         stdout: "inherit",
         stderr: "inherit",
       })
       await clone.exited
       if (clone.exitCode !== 0) {
-        process.stderr.write("Erreur lors du clonage.\n")
+        process.stderr.write("Error while cloning.\n")
         continue
       }
     } else {
-      process.stdout.write(`\nMise à jour de ${project.name}...\n`)
+      process.stdout.write(`\nUpdating ${project.name}...\n`)
       const pull = Bun.spawn(["git", "-C", dir, "pull", "--ff-only"], {
         stdout: "inherit",
         stderr: "inherit",
@@ -69,7 +69,7 @@ async function main() {
     })
     await proc.exited
 
-    // Boucle : le portfolio se relance automatiquement
+    // Loop: the portfolio relaunches automatically
   }
 }
 

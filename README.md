@@ -9,7 +9,7 @@
                                                                           CLI · v1.0
 ```
 
-**Mon portfolio, directement dans ton terminal.**
+**My portfolio, right inside your terminal.**
 
 [![Bun](https://img.shields.io/badge/Bun-%23000000.svg?style=flat-square&logo=bun&logoColor=white)](https://bun.sh)
 [![SolidJS](https://img.shields.io/badge/SolidJS-2c4f7c?style=flat-square&logo=solid&logoColor=c8c9cb)](https://solidjs.com)
@@ -24,23 +24,23 @@
 
 ---
 
-## Ce que tu peux faire ici
+## What you can do here
 
 ```
-  ↑ ↓  naviguer entre les projets
-  ↵    cloner & lancer le projet sélectionné
-  t    switcher thème clair / sombre
-  q    quitter
+  ↑ ↓  navigate between projects
+  ↵    clone & launch the selected project
+  t    toggle light / dark theme
+  q    quit
 ```
 
-- **Écran d'accueil animé** : ASCII art au démarrage  
-- **Navigation clavier/souris** : interface entièrement interactive  
-- **Clone & run** : `git clone` + lancement automatique  
-- **Thème switchable** : clair / sombre à la volée
+- **Animated splash screen**: ASCII art on startup  
+- **Keyboard/mouse navigation**: fully interactive interface  
+- **Clone & run**: `git clone` + automatic launch  
+- **Switchable theme**: light / dark on the fly
 
 ---
 
-## Démarrage rapide
+## Quick start
 
 ```bash
 git clone https://github.com/WhiteMuush/portfolio.git
@@ -48,10 +48,10 @@ cd portfolio
 bash portfolio.sh
 ```
 
-Le script vérifie automatiquement les dépendances ([Bun](https://bun.sh) ≥ 1.3, packages npm) et propose de les installer si nécessaire, puis lance le portfolio.
+The script automatically checks dependencies ([Bun](https://bun.sh) ≥ 1.3, npm packages) and offers to install them if needed, then launches the portfolio.
 
 <details>
-<summary>Lancement manuel</summary>
+<summary>Manual launch</summary>
 
 ```bash
 bun install
@@ -62,7 +62,7 @@ bun dev
 
 ---
 
-## Retrouve-moi ailleurs
+## Find me elsewhere
 
 <div align="center">
 
@@ -73,5 +73,5 @@ bun dev
 ---
 
 <div align="center">
-  <sub>Construit avec <a href="https://github.com/robinboehm/opentui">opentui</a> + SolidJS · par <strong>WhiteMuush</strong></sub>
+  <sub>Built with <a href="https://github.com/robinboehm/opentui">opentui</a> + SolidJS · by <strong>WhiteMuush</strong></sub>
 </div>
