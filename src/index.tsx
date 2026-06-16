@@ -33,6 +33,11 @@ async function main() {
     const project = pendingLaunch as Project
     const dir = join(process.env.HOME!, ".portfolio-cli", project.id)
 
+    if (!Bun.which("git")) {
+      process.stderr.write("git introuvable. Installez git puis réessayez.\n")
+      continue
+    }
+
     if (!existsSync(dir)) {
       process.stdout.write(`\nClonage de ${project.name}...\n`)
       const clone = Bun.spawn(["git", "clone", project.repo!, dir], {
@@ -44,6 +49,14 @@ async function main() {
         process.stderr.write("Erreur lors du clonage.\n")
         continue
       }
+    } else {
+      process.stdout.write(`\nMise à jour de ${project.name}...\n`)
+      const pull = Bun.spawn(["git", "-C", dir, "pull", "--ff-only"], {
+        stdout: "inherit",
+        stderr: "inherit",
+      })
+      await pull.exited
+      // Pull failure is non-fatal: run the existing checkout.
     }
 
     const proc = Bun.spawn(project.run!, {
