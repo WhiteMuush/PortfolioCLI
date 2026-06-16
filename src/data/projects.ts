@@ -20,8 +20,8 @@ export const projects: Project[] = [
   {
     id : "whoami",
     kind: "about",
-    name: "À propos",
-    tagline: "WhiteMuush · Étudiant Admin Sys et DevOps",
+    name: "About",
+    tagline: "WhiteMuush · Sysadmin & DevOps student",
     headerAscii: `        ███╗   ███╗███████╗██╗    ██╗   ██╗██╗███╗   ██╗    ██████╗ ███████╗████████╗██╗████████╗
         ████╗ ████║██╔════╝██║    ██║   ██║██║████╗  ██║    ██╔══██╗██╔════╝╚══██╔══╝██║╚══██╔══╝
         ██╔████╔██║█████╗  ██║    ██║   ██║██║██╔██╗ ██║    ██████╔╝█████╗     ██║   ██║   ██║   
@@ -31,9 +31,9 @@ export const projects: Project[] = [
                                                                                 Portfolio 2026
         `,
     description:
-      "Enchanté ! Je m'appelle Melvin et je suis étudiant Admin Cloud spécialisé en Azure " +
-      "avec une appétence pour le DevOps et la sécurité informatique. Je conçois des toolkits " +
-      "sur mesure, en mettant l'accent sur l'automatisation et la simplicité d'utilisation.",
+      "Nice to meet you! My name is Melvin and I'm a Cloud Admin student specialized in Azure " +
+      "with a strong interest in DevOps and information security. I build custom toolkits, " +
+      "with a focus on automation and ease of use.",
       
     contact: [
       { label: "GitHub",   value: "github.com/WhiteMuush",       action: "url" },
@@ -45,21 +45,21 @@ export const projects: Project[] = [
   {
     id: "sandevistan",
     name: "sandevistan",
-    tagline: "Toolkit cybersécurité : reconnaissance, exploitation, post-exploitation",
+    tagline: "Cybersecurity toolkit: reconnaissance, exploitation, post-exploitation",
     description:
-      "Plateforme cybersécurité tout-en-un où les outils de reconnaissance, d'exploitation " +
-      "et de post-exploitation convergent dans une interface unifiée. 6 modules intégrés : " +
-      "recon réseau, scan de vulnérabilités, frameworks d'exploitation, post-exploitation, " +
-      "récupération de credentials et génération de payloads.",
+      "All-in-one cybersecurity platform where reconnaissance, exploitation and " +
+      "post-exploitation tools converge into a unified interface. 6 integrated modules: " +
+      "network recon, vulnerability scanning, exploitation frameworks, post-exploitation, " +
+      "credential recovery and payload generation.",
     features: [
-      "Reconnaissance réseau : Nmap, Masscan, Amass, Recon-ng, theHarvester",
-      "Scan de vulnérabilités : Nikto, Nuclei, Wapiti, sqlmap, XSStrike",
-      "Frameworks d'exploitation : Metasploit, RouterSploit, BeEF, AutoSploit",
-      "Post-exploitation : PEASS-ng, LaZagne, Mimikatz, PowerSploit, Impacket",
-      "Récupération de credentials : hashcat, John the Ripper, Hydra, CrackMapExec",
-      "Génération de payloads : msfvenom, Veil, TheFatRat, Hoaxshell, Donut",
+      "Network reconnaissance: Nmap, Masscan, Amass, Recon-ng, theHarvester",
+      "Vulnerability scanning: Nikto, Nuclei, Wapiti, sqlmap, XSStrike",
+      "Exploitation frameworks: Metasploit, RouterSploit, BeEF, AutoSploit",
+      "Post-exploitation: PEASS-ng, LaZagne, Mimikatz, PowerSploit, Impacket",
+      "Credential recovery: hashcat, John the Ripper, Hydra, CrackMapExec",
+      "Payload generation: msfvenom, Veil, TheFatRat, Hoaxshell, Donut",
     ],
-    tech: ["Bash", "Python3", "Outils de sécurité"],
+    tech: ["Bash", "Python3", "Security tools"],
     snippet: ["chmod +x sandevistan.sh", "sudo bash sandevistan.sh"],
     repo: "https://github.com/WhiteMuush/sandevistan.git",
     run: ["sudo", "bash", "sandevistan.sh"],
@@ -69,18 +69,18 @@ export const projects: Project[] = [
     id: "Medusa",
     name: "Medusa",
     tagline:
-      "Toolkit bash d'orchestration : déploie et gère 35 outils de cybersécurité",
+      "Bash orchestration toolkit: deploys and manages 35 cybersecurity tools",
     description:
-      "Toolkit bash d'orchestration qui déploie et gère 35 outils open source de cybersécurité " +
-      "via un menu interactif ou en ligne de commande. 4 modules : SOC/Detection & Response, " +
-      "GRC/Governance & Compliance, Integration (IAM, Cloud, CI/CD), et OT/Industrial Security.",
+      "Bash orchestration toolkit that deploys and manages 35 open source cybersecurity tools " +
+      "via an interactive menu or the command line. 4 modules: SOC/Detection & Response, " +
+      "GRC/Governance & Compliance, Integration (IAM, Cloud, CI/CD), and OT/Industrial Security.",
     features: [
-      "14 outils SOC : SIEM, XDR, NDR, CTI, SOAR, forensique endpoint et réseau",
-      "5 outils GRC : conformité multi-frameworks (ISO 27001, NIS2, DORA, RGPD)",
-      "11 outils Integration : IAM, secrets, scan vulnérabilités, SAST, DAST",
-      "5 outils OT : surveillance passive réseaux industriels, cartographie ICS/SCADA",
-      "Environnements isolés : lab, audit client, formation",
-      "Mots de passe générés aléatoirement, credentials.txt chmod 600",
+      "14 SOC tools: SIEM, XDR, NDR, CTI, SOAR, endpoint and network forensics",
+      "5 GRC tools: multi-framework compliance (ISO 27001, NIS2, DORA, GDPR)",
+      "11 Integration tools: IAM, secrets, vulnerability scanning, SAST, DAST",
+      "5 OT tools: passive monitoring of industrial networks, ICS/SCADA mapping",
+      "Isolated environments: lab, client audit, training",
+      "Randomly generated passwords, credentials.txt chmod 600",
     ],
     tech: [
       "Bash",
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     snippet: [
       "medusa_deploy() {",
       "  docker compose -f \"$compose\" up -d",
-      "  log_success \"$tool déployé\"",
+      "  log_success \"$tool deployed\"",
       "}",
     ],
     ascii: ascii.Medusa,
@@ -103,18 +103,18 @@ export const projects: Project[] = [
   {
     id: "Kraken",
     name: "Kraken",
-    tagline: "Orchestrateur modulaire de tests de pénétration en Bash",
+    tagline: "Modular penetration testing orchestrator in Bash",
     description:
-      "Framework modulaire et léger en Bash pour orchestrer la reconnaissance, le scan, " +
-      "l'énumération et le reporting. Chaque module (« tentacule ») est indépendant et " +
-      "remplaçable, avec exécution parallèle et sorties structurées.",
+      "Modular, lightweight Bash framework to orchestrate reconnaissance, scanning, " +
+      "enumeration and reporting. Each module (\"tentacle\") is independent and " +
+      "replaceable, with parallel execution and structured output.",
     features: [
-      "Reconnaissance : sous-domaines, hôtes, DNS (Amass, Subfinder, theHarvester)",
-      "Scan de ports : rapide et détaillé (Nmap, Masscan)",
-      "Énumération web : répertoires, découverte techno (ffuf, Gobuster, Wapiti, Nikto)",
-      "Évaluation de vulnérabilités : Nuclei, SSLyze, WPScan",
-      "Reporting : export structuré des résultats, logs et état",
-      "Chaînage CLI : exécution d'un ou plusieurs modules via flags",
+      "Reconnaissance: subdomains, hosts, DNS (Amass, Subfinder, theHarvester)",
+      "Port scanning: fast and detailed (Nmap, Masscan)",
+      "Web enumeration: directories, tech discovery (ffuf, Gobuster, Wapiti, Nikto)",
+      "Vulnerability assessment: Nuclei, SSLyze, WPScan",
+      "Reporting: structured export of results, logs and state",
+      "CLI chaining: run one or more modules via flags",
     ],
     tech: ["Bash", "Nmap", "Masscan", "Nuclei", "ffuf"],
     snippet: [
@@ -128,17 +128,17 @@ export const projects: Project[] = [
   {
     id: "FeedYourSpider",
     name: "FeedYourSpider",
-    tagline: "Lanceur interactif pour outils de recon réseau et capture",
+    tagline: "Interactive launcher for network recon and capture tools",
     description:
-      "Toolkit bash qui encapsule les outils courants de reconnaissance et capture réseau " +
-      "avec des préréglages utiles. Sauvegarde les sorties dans des répertoires horodatés par " +
-      "outil et tente d'installer automatiquement les outils manquants sur de nombreuses plateformes.",
+      "Bash toolkit that wraps common network reconnaissance and capture tools " +
+      "with useful presets. Saves output to timestamped directories per tool " +
+      "and tries to auto-install missing tools on many platforms.",
     features: [
-      "Accès rapide : Nmap, Netcat, tcpdump, TShark, hping3",
-      "Intégrations arp-scan, Masscan, Nikto, dnsenum, WhatWeb",
-      "Répertoires de sortie horodatés sous $HOME par outil",
-      "Installation auto des outils manquants (apt, dnf, yum, pacman, zypper, apk, Homebrew)",
-      "Bash léger et compatible POSIX avec quoting sécurisé",
+      "Quick access: Nmap, Netcat, tcpdump, TShark, hping3",
+      "Integrations: arp-scan, Masscan, Nikto, dnsenum, WhatWeb",
+      "Timestamped output directories under $HOME per tool",
+      "Auto-install of missing tools (apt, dnf, yum, pacman, zypper, apk, Homebrew)",
+      "Lightweight, POSIX-compatible Bash with safe quoting",
     ],
     tech: ["Bash", "Nmap", "Netcat", "tcpdump", "Masscan"],
     snippet: [
@@ -154,18 +154,18 @@ export const projects: Project[] = [
   {
     id: "Ghostline",
     name: "Ghostline",
-    tagline: "Toolkit d'énumération Active Directory : 10+ outils de sécurité unifiés",
+    tagline: "Active Directory enumeration toolkit: 10+ security tools unified",
     description:
-      "Toolkit bash interactif qui automatise l'énumération Active Directory en intégrant " +
-      "10+ outils de sécurité professionnels dans une interface unifiée. Supporte la reconnaissance " +
-      "passive et active avec configuration persistante et sorties structurées.",
+      "Interactive bash toolkit that automates Active Directory enumeration by integrating " +
+      "10+ professional security tools into a unified interface. Supports passive and active " +
+      "reconnaissance with persistent configuration and structured output.",
     features: [
-      "Recon passive : Nmap, enum4linux-ng, rpcclient, ldapsearch, dnsrecon",
-      "Recon active : collecte BloodHound, CrackMapExec, adidnsdump, GetNPUsers",
-      "Configuration cible persistante (IP, domaine, identifiants)",
-      "Workflow automatisé sur tous les modules",
-      "Scan de vulnérabilités SMB et extraction de secrets domaine",
-      "Répertoires de sortie horodatés avec export JSON et XML",
+      "Passive recon: Nmap, enum4linux-ng, rpcclient, ldapsearch, dnsrecon",
+      "Active recon: BloodHound collection, CrackMapExec, adidnsdump, GetNPUsers",
+      "Persistent target configuration (IP, domain, credentials)",
+      "Automated workflow across all modules",
+      "SMB vulnerability scanning and domain secrets extraction",
+      "Timestamped output directories with JSON and XML export",
     ],
     tech: ["Bash", "BloodHound", "Impacket", "CrackMapExec", "Nmap"],
     ascii: ascii.Ghostline,
@@ -175,19 +175,19 @@ export const projects: Project[] = [
   {
     id: "Bull",
     name: "Bull",
-    tagline: "Provisioning automatisé de VM pentest : hardening et VPN kill-switch",
+    tagline: "Automated pentest VM provisioning: hardening and VPN kill-switch",
     description:
-      "Toolkit automatisé pour lancer des VM Kali Linux ou Parrot Security entièrement configurées " +
-      "avec hardening de sécurité intégré. Gère le provisioning via Vagrant, le /home chiffré avec " +
-      "ecryptfs, les credentials sécurisés par GPG, le VPN kill-switch et les snapshots pour " +
-      "retour arrière avant les opérations risquées.",
+      "Automated toolkit to spin up fully configured Kali Linux or Parrot Security VMs " +
+      "with built-in security hardening. Handles provisioning via Vagrant, /home encrypted with " +
+      "ecryptfs, GPG-secured credentials, VPN kill-switch and snapshots for " +
+      "rollback before risky operations.",
     features: [
-      "Provisioning auto de VM Kali/Parrot via Vagrant",
-      "VPN kill-switch : bloque le trafic si le VPN tombe",
-      "/home chiffré avec ecryptfs",
-      "Credentials GPG : AES256, SHA512, 65M itérations",
-      "Snapshots : retour arrière avant les opérations risquées",
-      "Gestionnaire de toolkit de sécurité intégré",
+      "Auto-provisioning of Kali/Parrot VMs via Vagrant",
+      "VPN kill-switch: blocks traffic if the VPN drops",
+      "/home encrypted with ecryptfs",
+      "GPG credentials: AES256, SHA512, 65M iterations",
+      "Snapshots: rollback before risky operations",
+      "Built-in security toolkit manager",
     ],
     tech: ["Bash", "Vagrant", "libvirt", "KVM/QEMU", "ecryptfs", "GPG"],
     snippet: [

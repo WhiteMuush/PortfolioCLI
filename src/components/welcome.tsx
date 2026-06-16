@@ -2,7 +2,7 @@ import { createSignal, onMount, onCleanup } from "solid-js"
 import { theme } from "../theme"
 
 export function Welcome(props: { onDone: () => void }) {
-  const fullText = "Bienvenue sur mon portfolio"
+  const fullText = "Welcome to my portfolio"
   const [displayed, setDisplayed] = createSignal("")
 
   onMount(() => {

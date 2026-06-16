@@ -28,11 +28,11 @@ export function Footer(props: {
       paddingTop={1}
       paddingBottom={1}
     >
-      <Bind keys="j / ↓" label="suivant"   onClick={props.onNext} />
-      <Bind keys="k / ↑" label="précédent" onClick={props.onPrev} />
-      {props.launchable && <Bind keys="Enter" label="cloner & lancer" onClick={props.onLaunch} />}
-      <Bind keys="t"     label="thème"     onClick={toggleTheme} />
-      <Bind keys="q"     label="quitter"   onClick={() => process.exit(0)} />
+      <Bind keys="j / ↓" label="next"     onClick={props.onNext} />
+      <Bind keys="k / ↑" label="previous" onClick={props.onPrev} />
+      {props.launchable && <Bind keys="Enter" label="clone & launch" onClick={props.onLaunch} />}
+      <Bind keys="t"     label="theme"    onClick={toggleTheme} />
+      <Bind keys="q"     label="quit"     onClick={() => process.exit(0)} />
     </box>
   )
 }

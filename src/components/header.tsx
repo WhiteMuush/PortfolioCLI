@@ -4,7 +4,7 @@ import { theme } from "../theme"
 const sequence = [
   { text: "Portfolio",                          color: theme.primary },
   { text: "DevSecOps",                          color: theme.accent },
-  { text: "Reconnaître. Exploiter. Défendre.",  color: theme.warning },
+  { text: "Recon. Exploit. Defend.",            color: theme.warning },
   { text: "Red Team · Blue Team · Purple Team", color: theme.info },
   { text: "DevSecOps Portfolio",                color: theme.textMuted },
 ]

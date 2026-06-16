@@ -13,7 +13,7 @@ warn() { echo -e "${YELLOW}!${RESET} $*"; }
 err()  { echo -e "${RED}✘${RESET} $*"; }
 info() { echo -e "${CYAN}→${RESET} $*"; }
 
-echo -e "${BOLD}Portfolio CLI — vérification des dépendances${RESET}"
+echo -e "${BOLD}Portfolio CLI, checking dependencies${RESET}"
 echo "─────────────────────────────────────────────"
 
 # ── Bun ──────────────────────────────────────────
@@ -21,44 +21,44 @@ if command -v bun &>/dev/null; then
   BUN_VERSION=$(bun --version)
   ok "bun $BUN_VERSION"
 else
-  err "bun introuvable"
-  warn "Bun est requis pour lancer le portfolio."
-  echo -n "Installer bun maintenant ? [O/n] "
+  err "bun not found"
+  warn "Bun is required to run the portfolio."
+  echo -n "Install bun now? [Y/n] "
   read -r REPLY
-  if [[ "${REPLY:-O}" =~ ^[Oo]$ ]]; then
-    info "Installation de bun…"
+  if [[ "${REPLY:-Y}" =~ ^[Yy]$ ]]; then
+    info "Installing bun…"
     curl -fsSL https://bun.sh/install | bash
     export PATH="$HOME/.bun/bin:$PATH"
     if command -v bun &>/dev/null; then
-      ok "bun installé — $(bun --version)"
+      ok "bun installed, $(bun --version)"
     else
-      err "Échec de l'installation. Relancez le terminal puis réessayez."
+      err "Installation failed. Restart the terminal then try again."
       exit 1
     fi
   else
-    err "bun est requis. Abandon."
+    err "bun is required. Aborting."
     exit 1
   fi
 fi
 
 # ── node_modules ─────────────────────────────────
 if [[ -d node_modules ]]; then
-  ok "node_modules présent"
+  ok "node_modules present"
 else
-  warn "Dépendances npm manquantes."
-  echo -n "Lancer 'bun install' ? [O/n] "
+  warn "npm dependencies missing."
+  echo -n "Run 'bun install'? [Y/n] "
   read -r REPLY
-  if [[ "${REPLY:-O}" =~ ^[Oo]$ ]]; then
-    info "Installation des packages…"
+  if [[ "${REPLY:-Y}" =~ ^[Yy]$ ]]; then
+    info "Installing packages…"
     bun install
-    ok "Packages installés"
+    ok "Packages installed"
   else
-    err "Les packages sont requis. Abandon."
+    err "Packages are required. Aborting."
     exit 1
   fi
 fi
 
 # ── Lancement ─────────────────────────────────────
 echo "─────────────────────────────────────────────"
-info "Lancement du portfolio…"
+info "Launching the portfolio…"
 exec bun run bin/portfolio.ts
