@@ -6,6 +6,7 @@ import { join } from "node:path"
 import { existsSync } from "node:fs"
 
 async function main() {
+  let firstRun = true
   while (true) {
     const renderer = await createCliRenderer({ targetFps: 30, exitOnCtrlC: false, useMouse: true })
     let pendingLaunch: Project | null = null
@@ -17,10 +18,11 @@ async function main() {
       renderer.once("destroy", resolve)
     })
 
-    render(() => <App onLaunch={(project) => {
+    render(() => <App skipWelcome={!firstRun} onLaunch={(project) => {
       pendingLaunch = project
       renderer.destroy()
     }} />, renderer)
+    firstRun = false
 
     await rendererDone
     process.removeListener("exit", onExit)

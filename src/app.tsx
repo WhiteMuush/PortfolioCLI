@@ -8,8 +8,8 @@ import { Welcome } from "./components/welcome"
 import { projects, type Project } from "./data/projects"
 import { theme, toggleTheme } from "./theme"
 
-export function App(props: { onLaunch: (project: Project) => void }) {
-  const [ready, setReady] = createSignal(false)
+export function App(props: { onLaunch: (project: Project) => void; skipWelcome?: boolean }) {
+  const [ready, setReady] = createSignal(!!props.skipWelcome)
   const [selected, setSelected] = createSignal(0)
   const current = createMemo(() => projects[selected()]!)
 
