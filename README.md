@@ -66,7 +66,7 @@ bun dev
 
 <div align="center">
 
-**[Portfolio WEB](https://portfolio-melvinpetit.vercel.app/)**
+**[Portfolio WEB](https://melvinpetit.com)**
 
 </div>
 
